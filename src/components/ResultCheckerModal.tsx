@@ -112,26 +112,35 @@ export const ResultCheckerModal: React.FC<ResultCheckerModalProps> = ({ isOpen, 
               }`}
             >
               <Search className="w-3.5 h-3.5" />
-              <span>Search Roll No. / Name</span>
+              <span>Roll Order List (14,624 Candidates)</span>
             </button>
           </div>
 
           {/* Quick Actions */}
           <div className="flex items-center gap-2">
             <button
+              onClick={handleDownload}
+              className="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded font-bold text-xs shadow-xs transition-colors flex items-center gap-1.5"
+              title="Download entire 524-page PDF file"
+            >
+              <Download className="w-3.5 h-3.5" />
+              <span>PDF (524 Pages)</span>
+            </button>
+
+            <button
               onClick={() => window.print()}
-              className="px-3 py-1.5 bg-white border border-stone-300 rounded hover:bg-stone-50 text-stone-700 font-medium flex items-center gap-1 shadow-xs"
+              className="px-2.5 py-1.5 bg-white border border-stone-300 rounded hover:bg-stone-50 text-stone-700 font-medium flex items-center gap-1 shadow-xs"
               title="Print document"
             >
               <Printer className="w-3.5 h-3.5" />
-              <span>Print</span>
+              <span className="hidden sm:inline">Print</span>
             </button>
 
             <a
               href="./Civil_Services_Mains_Examination_2026_Result.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-3 py-1.5 bg-stone-200 hover:bg-stone-300 rounded text-stone-800 font-medium flex items-center gap-1"
+              className="px-2.5 py-1.5 bg-stone-200 hover:bg-stone-300 rounded text-stone-800 font-medium flex items-center gap-1"
               title="Open in new window"
             >
               <ExternalLink className="w-3.5 h-3.5" />
