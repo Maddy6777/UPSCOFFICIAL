@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-ticker-seamless {
+  display: flex;
+  width: max-content;
+  animation: scrollText 16s linear infinite;
+}
+
+.animate-ticker-seamless:hover {
+  animation-play-state: paused;
+}

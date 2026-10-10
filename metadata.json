@@ -1,0 +1,6 @@
+{
+  "name": "Union Public Service Commission (UPSC) - Official Portal",
+  "description": "Official portal of the Union Public Service Commission (UPSC), Government of India. Access active examinations, OTR registration, e-admit cards, results, syllabus, and recruitment notices.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
