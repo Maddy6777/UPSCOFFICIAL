@@ -59,9 +59,9 @@ export const NoticeTicker: React.FC<NoticeTickerProps> = ({
                     {lang === 'hi' ? 'नया' : 'NEW'}
                   </span>
                 )}
-                {n.titleEn === 'UPSC MAINS EXAMINATION,2026 RESULT WILL BE OUT AT 12.30 PM' ? (
+                {n.titleEn === 'UPSC MAINS EXAMINATION,2026 RESULT WILL BE OUT AT 1 PM' ? (
                   <span className="bg-[#1b449c] text-white font-bold uppercase text-xs px-2.5 py-0.5 rounded-xs tracking-wider shadow-xs">
-                    UPSC MAINS EXAMINATION,2026 RESULT WILL BE OUT AT 12.30 PM
+                    UPSC MAINS EXAMINATION,2026 RESULT WILL BE OUT AT 1 PM
                   </span>
                 ) : (
                   <span className="group-hover:underline underline-offset-2">

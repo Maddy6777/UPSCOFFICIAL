@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Language } from '../types/upsc';
 import { Emblem, TricolorBar } from './Emblem';
 import { Shield, BookOpen, Landmark, Users, CheckCircle2 } from 'lucide-react';
@@ -17,6 +17,12 @@ export const AboutCommissionModal: React.FC<AboutCommissionModalProps> = ({
   initialTab = 'commission',
 }) => {
   const [activeTab, setActiveTab] = useState<'commission' | 'constitutional' | 'history' | 'charter'>('commission');
+
+  useEffect(() => {
+    if (initialTab && ['commission', 'constitutional', 'history', 'charter'].includes(initialTab)) {
+      setActiveTab(initialTab as 'commission' | 'constitutional' | 'history' | 'charter');
+    }
+  }, [initialTab, isOpen]);
 
   if (!isOpen) return null;
 

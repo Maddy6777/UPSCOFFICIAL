@@ -16,6 +16,9 @@ import { CutoffExplorerModal } from './components/CutoffExplorerModal';
 import { AboutCommissionModal } from './components/AboutCommissionModal';
 import { NotificationDetailModal } from './components/NotificationDetailModal';
 import { RTIModal } from './components/RTIModal';
+import { ExaminationsModal } from './components/ExaminationsModal';
+import { CandidateCornerModal } from './components/CandidateCornerModal';
+import { RecruitmentModal } from './components/RecruitmentModal';
 import { AnnouncementTicker } from './components/AnnouncementTicker';
 import { InterviewNoticeBanner } from './components/InterviewNoticeBanner';
 import { Footer } from './components/Footer';
@@ -36,6 +39,9 @@ export default function App() {
   const [isCutoffOpen, setIsCutoffOpen] = useState(false);
   const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [aboutInitialTab, setAboutInitialTab] = useState('commission');
+  const [isExaminationsOpen, setIsExaminationsOpen] = useState(false);
+  const [isCandidateCornerOpen, setIsCandidateCornerOpen] = useState(false);
+  const [isRecruitmentOpen, setIsRecruitmentOpen] = useState(false);
   const [isRtiOpen, setIsRtiOpen] = useState(false);
   const [selectedNotification, setSelectedNotification] = useState<ExamNotification | null>(null);
   const [showContactModal, setShowContactModal] = useState(false);
@@ -63,6 +69,7 @@ export default function App() {
       case 'cutoff':
         setIsCutoffOpen(true);
         break;
+      case 'about':
       case 'about_commission':
         setAboutInitialTab('commission');
         setIsAboutOpen(true);
@@ -78,6 +85,15 @@ export default function App() {
       case 'about_charter':
         setAboutInitialTab('charter');
         setIsAboutOpen(true);
+        break;
+      case 'examinations':
+        setIsExaminationsOpen(true);
+        break;
+      case 'candidate_corner':
+        setIsCandidateCornerOpen(true);
+        break;
+      case 'recruitment':
+        setIsRecruitmentOpen(true);
         break;
       case 'rti':
         setIsRtiOpen(true);
@@ -239,6 +255,24 @@ export default function App() {
         initialTab={aboutInitialTab}
       />
       <RTIModal isOpen={isRtiOpen} onClose={() => setIsRtiOpen(false)} lang={lang} />
+      <ExaminationsModal
+        isOpen={isExaminationsOpen}
+        onClose={() => setIsExaminationsOpen(false)}
+        lang={lang}
+        onOpenPortal={handleOpenPortal}
+      />
+      <CandidateCornerModal
+        isOpen={isCandidateCornerOpen}
+        onClose={() => setIsCandidateCornerOpen(false)}
+        lang={lang}
+        onOpenPortal={handleOpenPortal}
+      />
+      <RecruitmentModal
+        isOpen={isRecruitmentOpen}
+        onClose={() => setIsRecruitmentOpen(false)}
+        lang={lang}
+        onOpenPortal={handleOpenPortal}
+      />
       <NotificationDetailModal
         notification={selectedNotification}
         onClose={() => setSelectedNotification(null)}
