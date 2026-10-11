@@ -17,6 +17,7 @@ import { AboutCommissionModal } from './components/AboutCommissionModal';
 import { NotificationDetailModal } from './components/NotificationDetailModal';
 import { RTIModal } from './components/RTIModal';
 import { AnnouncementTicker } from './components/AnnouncementTicker';
+import { InterviewNoticeBanner } from './components/InterviewNoticeBanner';
 import { Footer } from './components/Footer';
 import { Phone, Mail, MapPin, ExternalLink, ShieldCheck, CheckCircle2 } from 'lucide-react';
 
@@ -139,6 +140,9 @@ export default function App() {
 
       {/* Full-width announcement ticker below What's New */}
       <AnnouncementTicker onResultClick={() => handleOpenPortal('results')} />
+
+      {/* Official Notice regarding Interview Form */}
+      <InterviewNoticeBanner />
 
       {/* Main Content Area */}
       <main id="main-content" className="flex-1">
