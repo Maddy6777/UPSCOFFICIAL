@@ -10,8 +10,8 @@ import {
 export const LATEST_NOTIFICATIONS: ExamNotification[] = [
   {
     id: 'cse-result-announcement',
-    titleEn: 'UPSC MAINS EXAMINATION,2026 RESULT WILL BE OUT AT 1 PM',
-    titleHi: 'UPSC MAINS EXAMINATION,2026 RESULT WILL BE OUT AT 1 PM (यूपीएससी मुख्य परीक्षा 2026 परिणाम अपराह्न 1:00 बजे जारी होगा)',
+    titleEn: 'UPSC MAINS EXAMINATION,2026 RESULT HAS BEEN ANNOUNCED',
+    titleHi: 'UPSC MAINS EXAMINATION,2026 RESULT HAS BEEN ANNOUNCED (यूपीएससी मुख्य परीक्षा 2026 परिणाम घोषित किया गया है)',
     examCode: 'CSE-RESULT',
     date: '11/10/2026',
     isNew: true,

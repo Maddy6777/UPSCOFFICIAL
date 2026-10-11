@@ -5,7 +5,7 @@ interface AnnouncementTickerProps {
 }
 
 export const AnnouncementTicker: React.FC<AnnouncementTickerProps> = ({ onResultClick }) => {
-  const message = 'UPSC MAINS EXAMINATION,2026 RESULT WILL BE OUT AT 1 PM';
+  const message = 'UPSC MAINS EXAMINATION,2026 RESULT HAS BEEN ANNOUNCED';
 
   // Array of repeated items for a continuous, seamless infinite loop
   const items = Array.from({ length: 8 }, (_, i) => i);
